@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char** argv) {
+    int n;
+    int i,j;
+    int s=0;
+    printf("inserte el valor de n\n");
+    scanf("%d",&n);
+    for(i=n; i>0; i--){
+        //datos en aumento
+        for(j=1;j<i+1; j++)
+            printf("%d", j);
+        //espacios
+        for(j=0; j<s; j++)
+            printf(" ");
+        //datos en decremento
+        for(j=i; j>=1; j--)
+            printf("%d", j);
+        printf("\n");
+        s+=2;
+    }
+    return (EXIT_SUCCESS);
+}
